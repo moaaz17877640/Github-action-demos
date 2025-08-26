@@ -1,0 +1,26 @@
+name : pipeline for test 
+on : 
+    push :
+        branches : 
+            - main
+            - test
+    pull_request :
+        branches : 
+            - main
+            - test
+jobs :
+    deploy :
+        runs-on : ubutu-latest
+        env :
+            ENV : production
+        steps :
+            - name : checkout
+              uses : actions/checkout@v5.0.0
+            - name : install npm packages
+              run  : |
+                npm install
+                echo "done installing"
+            - name : complete deployment
+              run : echo "deployment completed"
+              
+                  
