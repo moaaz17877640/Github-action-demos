@@ -18,8 +18,8 @@ jobs :
               uses : actions/checkout@v5.0.0
             - name : install npm packages
               run  : |
-                npm install
-                echo "done installing"
+                  npm install
+                  echo "done installing"
             - name : complete deployment
               run : echo "deployment completed"
               
