@@ -1,20 +1,8 @@
 name : pipeline for test 
 on : 
-    push :
-        branches : 
-            - main
-            - test
-            - "release/** "
-        paths :
-            - 'src/**'            
-            - 'test/**'                     
-            - 'build/**'
-            - 'config/**'
-            - 'release/**'
-    pull_request :
-        branches : 
-            - main
-            - test
+
+    workflow_dispatch :
+        
 jobs :
     deploy :
         runs-on : ubutu-latest
