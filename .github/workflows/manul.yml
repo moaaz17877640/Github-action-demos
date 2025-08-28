@@ -1,0 +1,14 @@
+name: pipeline for test
+on:
+    workflow_dispatch:
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        env:
+            ENV: production
+        steps:
+            - name: install npm packages
+              run: echo "npm packages installed"
+            - name: complete deployment
+              run: echo "deployment completed"
