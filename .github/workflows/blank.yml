@@ -1,0 +1,27 @@
+name : pipeline for test 
+on : 
+    push :
+        branches : 
+            - main
+            - master
+    pull_request :
+        branches : 
+            - main
+            - master
+jobs :
+    deploy :
+        runs-on : ubuntu-latest
+        env :
+            ENV : production
+        steps :
+            - name : checkout
+              uses : actions/checkout@v5.0.0
+
+            - name : install npm packages
+              run : |
+                
+                echo "npm packages installed"
+            - name : complete deployment
+              run : echo "deployment completed"
+              
+                  
