@@ -4,6 +4,13 @@ on :
         branches : 
             - main
             - test
+            - "release/** "
+        paths :
+            - 'src/**'            
+            - 'test/**'                     
+            - 'build/**'
+            - 'config/**'
+            - 'release/**'
     pull_request :
         branches : 
             - main
