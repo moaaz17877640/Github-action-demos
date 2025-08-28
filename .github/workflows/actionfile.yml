@@ -21,13 +21,8 @@ jobs :
         env :
             ENV : production
         steps :
-            - name : checkout
-              uses : actions/checkout@v5.0.0
-
             - name : install npm packages
-              run : |
-                
-                echo "npm packages installed"
+              run :  echo "npm packages installed"
             - name : complete deployment
               run : echo "deployment completed"
               
