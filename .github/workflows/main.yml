@@ -25,6 +25,9 @@ jobs :
     steps :
       - name : done deploying
         run : ls -al
+      - name : testing env
+        run : echo "we are in ${{ inputs.env }} environment "
+      
         
      
       
