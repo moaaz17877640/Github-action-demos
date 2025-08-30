@@ -1,0 +1,19 @@
+on : 
+  workflow_dispatch:
+
+jobs :
+  stagging :
+    runs-on : ubuntu-latest
+    steps :
+      - name : test manual pips 
+        run : echo "hello from manual pips "
+      - name : checkout repos 
+        uses: actions/checkout@v5.0.0
+  deploying :
+    runs-on : ubuntu-latest
+    steps :
+      - name : done deploying
+        run : ls -al
+        
+     
+      
