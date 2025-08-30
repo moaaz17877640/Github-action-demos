@@ -1,5 +1,16 @@
 on : 
   workflow_dispatch:
+    inputs : 
+      env :
+         required : true
+         description : choose one env
+         type: choice
+         default : "prod"
+         options:
+           - prod
+           - dev
+             
+    
 
 jobs :
   stagging :
